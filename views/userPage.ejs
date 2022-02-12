@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+    <h1 class="display-3">Successfully Logged In!</h1>
+    <p class="secret-text">Edit profile</p>
+
+    <form action="/editProfile" method="POST">
+
+      <div class="form-group">       
+        <label for="profilePic">profile Picture</label>
+      </div>
+      <div class="form-group">       
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+      <button type="submit" class="btn btn-dark">Update</button>
+    </form>
+
+  </div>
+</div>
+<%- include('partials/footer') %>
